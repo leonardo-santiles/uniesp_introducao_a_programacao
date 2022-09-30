@@ -1,17 +1,32 @@
 '''
-6. Faça um cadastro de usuários com nome, idade
+7. Faça um cadastro de usuários com nome, idade
 e email, utilizando apenas o que você aprendeu até
 agora.
 '''
-controle = True;
+usuarios = [];
+botao = 1000;
 
-while controle:
-  nome = input('Digite seu nome ou "fim" para finalizar o programa: ');
+while botao != 0:
+  print("Digite 0 para sair");
+  print("Digite 1 para cadastrar novo usuário");
+  print("Digite 2 para imprimir todos os usuários");
 
-  if (nome == 'fim'):
-    controle = False;
-    break;
+  botao = int(input("Digite a opção desejada: "));
 
-  idade = input('Digite sua idade: ');
-  email = input('Digite seu e-mail: ');
-  print(f'Cadastro de usuário: [nome: {nome}, idade: {idade}, e-mail: {email}]');
+  if botao == 1:
+    nome = input("Digite o nome: ");
+    idade = int(input("Digite a idade: "));
+    email = input("Digite o e-mail: ");
+
+    usuario = [nome, idade, email];
+    usuarios.append(usuario);
+
+  elif botao == 2:
+    for usuario in usuarios:
+      print(usuario);
+
+  elif botao == 0:
+    print("Obrigado por utilizar o app!");
+
+  else:
+    print("Digite uma opção válida");
