@@ -18,16 +18,18 @@ while True:
   
   vetorQ.append(num)
   
-  if len(vetorQ) == 3:
+  if len(vetorQ) == 20:
     break
 
-maior = max(vetorQ)
-posicao_maior = vetorQ.index(maior)
-print(f"Valor do maior elemento: {maior}")
-print(f"Posição do maior elemento no vetor: {posicao_maior}")
+maior = vetorQ[0]
+menor = vetorQ[0]
 
+for num in vetorQ:
+  if num > maior:
+    maior = num
 
-menor = min(vetorQ)
-posicao_menor = vetorQ.index(menor)
-print(f"Valor do menor elemento: {menor}")
-print(f"Posição do menor elemento no vetor: {posicao_menor}")
+  if num < menor:
+    menor = num
+
+print(f"Maior valor {maior} e seu índice {vetorQ.index(maior)}")
+print(f"Menor valor {menor} e seu índice {vetorQ.index(menor)}")

@@ -10,16 +10,13 @@
 
 clubes = []
 
-while True:
-  clube = input("Clube que deseja armazenar: ")
+for i in range(3):
+  clube = input("Clube que deseja armazenar: ").upper()
   clubes.append(clube)
 
-  if len(clubes) == 10:
-    break
+clube_buscar = input("Clube que deseja buscar: ").upper()
 
-clube = input("Clube que deseja buscar: ")
-
-if clube in clubes:
+if clube_buscar in clubes:
   print("ACHEI")
 else:
   print("NÃO ACHEI")

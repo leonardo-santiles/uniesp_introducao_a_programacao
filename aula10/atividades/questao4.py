@@ -6,19 +6,20 @@
    vetor M.
 '''
 
+from random import randint
+
 vetorA = []
-
-while True:
-  num = int(input("Digite um número inteiro: "))
-  vetorA.append(num)
-
-  if len(vetorA) == 10:
-    break
-
-x = int(input("Digite mais um número inteiro: "))
-
 vetorM = []
-for num in vetorA:
-  vetorM.append(num * x)
 
-print(f"Vator M: {vetorM}")
+for i in range(10):
+  vetorA.append(randint(0, 100))
+
+x = randint(0, 9)
+
+for i in range(len(vetorA)):
+  vetorM.append(x * vetorA[i])
+
+
+print(f"Vator A: {vetorA}")
+print(f"Variável x: {x}")
+print(f"Vetor M: {vetorM}")
