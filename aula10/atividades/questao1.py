@@ -10,7 +10,7 @@
 
 clubes = []
 
-for i in range(3):
+for i in range(10):
   clube = input("Clube que deseja armazenar: ").upper()
   clubes.append(clube)
 
